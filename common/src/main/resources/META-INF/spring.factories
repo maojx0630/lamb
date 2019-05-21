@@ -2,4 +2,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.github.maojx0630.common.response.ResponseConfiguration,\
 com.github.maojx0630.common.redis.RedisConfiguration,\
 com.github.maojx0630.common.feign.TransmitUserConfiguration,\
-com.github.maojx0630.common.login.LoginAuthServiceConfiguration
+com.github.maojx0630.common.login.LoginAuthServiceConfiguration,\
+com.github.maojx0630.common.qiniu.QiniuConfiguration
