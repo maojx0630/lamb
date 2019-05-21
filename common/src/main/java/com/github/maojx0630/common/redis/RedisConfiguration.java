@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 @Configuration
 @ConditionalOnBean(RedisTemplate.class)
-public class RedisConfig {
+public class RedisConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(RedisObject.class)

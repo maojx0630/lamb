@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @ConditionalOnClass(RequestTemplate.class)
 @ConditionalOnWebApplication
-public class TransmitUserConfig implements WebMvcConfigurer {
+public class TransmitUserConfiguration implements WebMvcConfigurer {
 
 	@Bean
 	public TransmitUserInfoFeignClientIntercepter transmitUserInfoFeignClientIntercepter(){
