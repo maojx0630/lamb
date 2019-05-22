@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface Client {
 
 	@GetMapping("/")
-	ResponseResult<String> test(@RequestParam("name") String name);
+	ResponseResult<Integer> test(@RequestParam("name") String name);
 
 }

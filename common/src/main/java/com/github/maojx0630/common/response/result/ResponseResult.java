@@ -59,7 +59,10 @@ public class ResponseResult<T> implements ResponseResultState {
 		this.data = data;
 	}
 
-	public boolean isSuccess(){
+	public boolean success(){
 		return StateEnum.success.getMsg().equals(this.msg);
 	}
+
+	public boolean failure() {
+		return  !success(); }
 }
