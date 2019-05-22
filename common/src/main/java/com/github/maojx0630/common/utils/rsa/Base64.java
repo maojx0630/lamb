@@ -63,10 +63,10 @@ public final class Base64 {
     }
 
     /**
-     * Encodes hex octects into Base64
+     * Encodes hex octects into Base64Utils
      *
      * @param binaryData Array containing binaryData
-     * @return Encoded Base64 array
+     * @return Encoded Base64Utils array
      */
     public static String encode(byte[] binaryData) {
 
@@ -154,9 +154,9 @@ public final class Base64 {
     }
 
     /**
-     * Decodes Base64 data into octects
+     * Decodes Base64Utils data into octects
      *
-     * @param encoded string containing Base64 data
+     * @param encoded string containing Base64Utils data
      * @return Array containind decoded data.
      */
     public static byte[] decode(String encoded) {
@@ -252,7 +252,7 @@ public final class Base64 {
     }
 
     /**
-     * remove WhiteSpace from MIME containing encoded Base64 data.
+     * remove WhiteSpace from MIME containing encoded Base64Utils data.
      *
      * @param data  the byte array of base64 data (with WS)
      * @return      the new length

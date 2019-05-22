@@ -1,6 +1,7 @@
 package com.github.maojx0630.common.qiniu;
 
 import com.alibaba.fastjson.JSON;
+import com.github.maojx0630.common.utils.Base64Utils;
 import com.google.gson.Gson;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Client;
@@ -11,7 +12,6 @@ import com.qiniu.util.UrlSafeBase64;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
@@ -95,7 +95,7 @@ public class QiniuService {
 		DefaultPutRet putRet=null;
 		try {
 			//Base64解码
-			byte[] b = new BASE64Decoder().decodeBuffer(base64);
+			byte[] b = Base64Utils.decode(base64);
 			for(int i=0;i<b.length;++i){
 				if(b[i]<0){//调整异常数据
 					b[i]+=256;

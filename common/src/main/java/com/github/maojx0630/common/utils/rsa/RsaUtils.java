@@ -1,6 +1,6 @@
 package com.github.maojx0630.common.utils.rsa;
 
-import sun.misc.BASE64Decoder;
+import com.github.maojx0630.common.utils.Base64Utils;
 
 import javax.crypto.Cipher;
 import java.security.*;
@@ -84,7 +84,7 @@ public class RsaUtils {
 	 */
 	public static PublicKey getPublicKey(String key) {
 		try {
-			byte[] keyBytes = (new BASE64Decoder()).decodeBuffer(key);
+			byte[] keyBytes = Base64Utils.decode(key);
 			X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			return keyFactory.generatePublic(keySpec);
@@ -98,7 +98,7 @@ public class RsaUtils {
 	 */
 	public static PrivateKey getPrivateKey(String key) {
 		try {
-			byte[] keyBytes = (new BASE64Decoder()).decodeBuffer(key);
+			byte[] keyBytes = Base64Utils.decode(key);
 			PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 			return keyFactory.generatePrivate(keySpec);
