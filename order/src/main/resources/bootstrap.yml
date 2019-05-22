@@ -11,4 +11,3 @@ spring:
         file-extension : yml
         shared-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml
         refreshable-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml
-        namespace: a2caba6c-bf86-428e-b00c-23f350112232

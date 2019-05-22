@@ -1,5 +1,9 @@
 package com.github.maojx0630.order.controller;
 
+import com.github.maojx0630.common.response.result.ResponseResult;
+import com.github.maojx0630.order.client.Client;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,4 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class Controller {
+
+	@Autowired
+	private Client client;
+
+	@GetMapping("/")
+	public ResponseResult<String> test(String name){
+		return client.test(name);
+	}
 }

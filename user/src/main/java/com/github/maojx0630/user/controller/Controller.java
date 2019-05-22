@@ -1,7 +1,5 @@
 package com.github.maojx0630.user.controller;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,15 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @description:
  */
 @RestController
-@RefreshScope
 public class Controller {
 
-	@Value("${test}")
-	private String string;
-
 	@GetMapping("/")
-	public Object test(){
-		return string;
+	public String test(String name){
+		return name;
 	}
 
 }

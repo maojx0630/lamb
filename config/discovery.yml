@@ -2,5 +2,4 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: a2caba6c-bf86-428e-b00c-23f350112232
         server-addr: 127.0.0.1:8848
