@@ -1,8 +1,9 @@
-package com.github.maojx0630.admin;
+package com.github.maojx0630.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author: MaoJiaXing
@@ -11,9 +12,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class AdminApplication {
+@EnableFeignClients
+public class UserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminApplication.class);
+		SpringApplication.run(UserApplication.class);
 	}
 }

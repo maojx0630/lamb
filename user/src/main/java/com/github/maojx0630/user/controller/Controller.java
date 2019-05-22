@@ -1,4 +1,4 @@
-package com.github.maojx0630.admin.controller;
+package com.github.maojx0630.user.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;

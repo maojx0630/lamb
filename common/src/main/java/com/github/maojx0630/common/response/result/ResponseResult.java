@@ -1,6 +1,8 @@
 package com.github.maojx0630.common.response.result;
 
 
+import com.github.maojx0630.common.response.exception.StateEnum;
+
 /**
  * @author MaoJiaXing
  */
@@ -55,5 +57,9 @@ public class ResponseResult<T> implements ResponseResultState {
 
 	public void setData(T data) {
 		this.data = data;
+	}
+
+	public boolean isSuccess(){
+		return StateEnum.success.getMsg().equals(this.msg);
 	}
 }

@@ -5,7 +5,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>common</module>
-		<module>admin</module>
+		<module>user</module>
+		<module>order</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
