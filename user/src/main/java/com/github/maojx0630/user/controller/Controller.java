@@ -1,6 +1,7 @@
 package com.github.maojx0630.user.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@GetMapping("/")
-	public String test(String name){
+	public String test(@RequestParam("name") String name){
 		return name;
 	}
 
