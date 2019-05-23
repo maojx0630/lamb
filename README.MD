@@ -35,6 +35,53 @@ sentinel-dashboard.jar
 	* 在发起者使用 ```@Transactional``` ```@LcnTransaction```
 	* 被调用者使用 ```@Transactional```  
 	```@LcnTransaction(propagation= DTXPropagation.SUPPORTS)```
+## graylog分布式日志收集
+* graylog安装方法不赘述
+* 引入依赖
+```xml
+<dependency>
+    <groupId>de.siegmar</groupId>
+    <artifactId>logback-gelf</artifactId>
+    <version>2.0.0</version>
+</dependency>
+```
+* 在resources目录下添加 logback.xml
+```xml
+<configuration>
+
+    <appender name="GELF" class="de.siegmar.logbackgelf.GelfUdpAppender">
+        <graylogHost>localhost</graylogHost>
+        <graylogPort>12201</graylogPort>
+        <maxChunkSize>508</maxChunkSize>
+        <useCompression>true</useCompression>
+        <encoder class="de.siegmar.logbackgelf.GelfEncoder">
+            <originHost>localhost</originHost>
+            <includeRawMessage>false</includeRawMessage>
+            <includeMarker>true</includeMarker>
+            <includeMdcData>true</includeMdcData>
+            <includeCallerData>false</includeCallerData>
+            <includeRootCauseData>false</includeRootCauseData>
+            <includeLevelName>false</includeLevelName>
+            <shortPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>%m%nopex</pattern>
+            </shortPatternLayout>
+            <fullPatternLayout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>%m%n</pattern>
+            </fullPatternLayout>
+            <staticField>app_name:backend</staticField>
+            <staticField>os_arch:${os.arch}</staticField>
+            <staticField>os_name:${os.name}</staticField>
+            <staticField>os_version:${os.version}</staticField>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="GELF" />
+    </root>
+
+</configuration>
+```
+* 插件地址 https://github.com/osiegmar/logback-gelf
 ##关于config目录
 该目录放置用于存放在nacos的配置文件
 ##关于common包
