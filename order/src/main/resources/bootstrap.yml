@@ -6,8 +6,8 @@ spring:
   cloud:
     nacos:
       config:
-        prefix: admin
+        prefix: order
         server-addr: 127.0.0.1:8848
         file-extension : yml
         shared-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,seata.yml
-        refreshable-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,seata.yml
+        refreshable-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,txlcn.yml

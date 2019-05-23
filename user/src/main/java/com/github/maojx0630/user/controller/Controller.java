@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author: MaoJiaXing
  * @date: 2019-05-20 11:12
@@ -18,7 +20,7 @@ public class Controller {
 	private Service service;
 
 	@GetMapping("/")
-	public Integer test(@RequestParam("name") String name){
+	public Integer test(@RequestParam("name") String name, HttpServletRequest request){
 		return service.test(name);
 	}
 

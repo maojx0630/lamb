@@ -1,10 +1,10 @@
 package com.github.maojx0630.order.service;
 
-import com.alibaba.fescar.spring.annotation.GlobalTransactional;
-import com.github.maojx0630.common.response.result.ResponseResult;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.github.maojx0630.order.client.Client;
 import com.github.maojx0630.order.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author: MaoJiaXing
@@ -20,11 +20,12 @@ public class Service {
 	@Autowired
 	private Client client;
 
-	@GlobalTransactional
+	@Transactional
+	@LcnTransaction
 	public String test(String name) {
-		int i=mapper.update(name,"1");
-		ResponseResult<Integer> responseResult=client.test(name);
-		int k=mapper.update(name,"3");
-		return "ok";
+		mapper.update(name,"1");
+		client.test(name);
+		mapper.update(name,"3");
+		return "123";
 	}
 }
