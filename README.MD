@@ -31,6 +31,7 @@ sentinel-dashboard.jar
 * 手动使用 ```mvn clean  package '-Dmaven.test.skip=true'``` 命令打包
 * 以spring boot配置方式启动即可
 * 使用方法
+	* 启动类增加 ```@EnableDistributedTransaction```
 	* 在发起者使用 ```@Transactional``` ```@LcnTransaction```
 	* 被调用者使用 ```@Transactional```  
 	```@LcnTransaction(propagation= DTXPropagation.SUPPORTS)```
