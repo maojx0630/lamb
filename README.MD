@@ -82,7 +82,7 @@ sentinel-dashboard.jar
 </configuration>
 ```
 * 插件地址 https://github.com/osiegmar/logback-gelf
-##链路监控skywalking
+## 链路监控skywalking
 * http://skywalking.apache.org/downloads/ 下载 前置需求es
 * 解压后 修改webapp/webapp.yml 的port为 10800 (避免占用8080端口,若用docker启动也可不更改直接-p映射即可)
 * 修改 config/application.yml 的storage 将h2注释  将es部分注释打开配置正确的clusterNodes地址
@@ -96,11 +96,11 @@ sentinel-dashboard.jar
 -Dskywalking.agent.service_name=nacos-provider
 -Dskywalking.collector.backend_service=localhost:11800
 ```
-##关于config目录
+## 关于config目录
 该目录放置用于存放在nacos的配置文件
-##关于common包
+## 关于common包
 common包均采用自动装配,具体装配策略详见spring.factories
-##mybatis分页工具采用我自己写的paging 也可根据自己需要引入
-##推荐mybatis的idea插件 
+## mybatis分页工具采用我自己写的paging 也可根据自己需要引入
+## 推荐mybatis的idea插件 
 ```MyBatis Log Plugin ```  
 ```MyBatisCodeHelperPro```
