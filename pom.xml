@@ -8,6 +8,8 @@
 		<module>user</module>
 		<module>order</module>
 		<module>rabbit-dlx</module>
+		<module>sw-a</module>
+		<module>sw-b</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
