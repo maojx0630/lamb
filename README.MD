@@ -88,7 +88,8 @@ sentinel-dashboard.jar
 * 修改 config/application.yml 的storage 将h2注释  将es部分注释打开配置正确的clusterNodes地址
 * 如果直接启动 可以 进入bin目录  sh startup.sh启动即可 
 * 若docker启动则手动打包为docker镜像 命令需要额外 tail -f 防止自动关闭
-* 运行 docker run -d -p  10800:10800 -p 11800:11800 -p 12800:12800  --name skywalking skywalking
+* 运行 docker run -d -p  10800:10800 -p 11800:11800 -p 12800:12800  --name skywalking skywalking  
+(如果没有修改webapp端口则 10800:8080)
 * 客户端使用方法:  
 启动每个服务时加上以下虚拟机参数, javaagent配置绝对路径, Dskywalking.agent.service_name 对应服务名
 ```
