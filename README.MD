@@ -1,5 +1,5 @@
-#lamb
-##nacos启动
+# lamb
+## nacos启动
 * https://github.com/alibaba/nacos/releases 下载稳定版本  
 * 在mysql数据库中创建nacos库名  
 * 将conf中的nacos-mysql.sql文件导入
