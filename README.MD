@@ -101,7 +101,7 @@ sentinel-dashboard.jar
 该目录放置用于存放在nacos的配置文件
 ## 关于common包
 common包均采用自动装配,具体装配策略详见spring.factories
-## 关于权限管理 推荐使用vue动态路由+springAnt规则校验  
+## 关于权限管理 准备使用vue动态路由+springAnt规则校验  
 ```org.springframework.util.AntPathMatcher```
 ## mybatis分页工具采用我自己写的paging 也可根据自己需要引入
 ## 推荐mybatis的idea插件 
