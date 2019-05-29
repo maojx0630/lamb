@@ -21,10 +21,10 @@ sh startup.sh -m standalone
 * https://github.com/alibaba/Sentinel/releases 下载稳定版本我是用的1.6  
 * 通过如下命令启动
 ```
-java -Dserver.port=8888 -Dcsp.sentinel.dashboard.server=localhost:8888 -Dproject.name=sentinel-dashboard -jar 
+java -Dserver.port=8888 -Dsentinel.dashboard.auth.username=admin -Dsentinel.dashboard.auth.password=admin -Dcsp.sentinel.dashboard.server=localhost:8888 -Dproject.name=sentinel-dashboard -jar 
 sentinel-dashboard.jar
 ```
-* 启动后即可通过浏览器访问端口号为8888默认账号密码sentinel
+* 启动后即可通过浏览器访问端口号为8888  账号密码admin
 ## tx-lcn分布式事物协调器启动
 * https://github.com/codingapi/tx-lcn/releases/tag/5.0.2.RELEASE 下载稳定版本  
 * 修改txlcn-tm子项目下的application.properties配置文件 mysql与redis
