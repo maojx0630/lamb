@@ -1,16 +1,13 @@
 server:
   port: 8085
-  servlet:
-    context-path:
 spring:
   application:
     name: swb
-
   cloud:
     nacos:
       config:
         prefix: swb
         server-addr: 127.0.0.1:8848
         file-extension : yml
-        shared-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,seata.yml
+        shared-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,txlcn.yml
         refreshable-dataids: public.yml,discovery.yml,sentinel.yml,redis.yml,datasource.yml,txlcn.yml

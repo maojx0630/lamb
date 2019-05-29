@@ -1,0 +1,22 @@
+spring:
+  # 配置路由规则
+  routes:
+    - id: user
+      # 采用 LoadBalanceClient 方式请求，以 lb:// 开头，后面的是注册在 Nacos 上的服务名
+      uri: lb://user
+        # Predicate 翻译过来是“谓词”的意思，必须，主要作用是匹配用户的请求，有很多种用法
+      # Method 方法谓词，这里是匹配 GET 和 POST 请求
+      predicates:
+        - Path=/
+    - id: order
+      uri: lb://order
+      predicates:
+        - Path=/
+    - id: swa
+      uri: lb://swa
+      predicates:
+        - Path=/
+    - id: swb
+      uri: lb://swb
+      predicates:
+        - Path=/

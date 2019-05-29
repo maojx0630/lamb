@@ -10,6 +10,7 @@
 		<module>rabbit-dlx</module>
 		<module>sw-a</module>
 		<module>sw-b</module>
+		<module>gateway</module>
 	</modules>
 
 	<groupId>com.github.maojx0630</groupId>
@@ -23,6 +24,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
 		<!-- 基础配置属性 -->
 		<!-- spring boot 版本 -->
 		<spring-boot.version>2.1.4.RELEASE</spring-boot.version>
