@@ -1,6 +1,6 @@
 # lamb
 ## nacos启动
-* https://github.com/alibaba/nacos/releases 下载稳定版本  
+* https://github.com/alibaba/nacos/releases/tag/1.0.0 下载稳定版本  
 * 在mysql数据库中创建nacos库名  
 * 将conf中的nacos-mysql.sql文件导入
 * 修改application.properties加入
@@ -18,13 +18,13 @@ sh startup.sh -m standalone
 * 启动成功后即可通过8848端口访问  
 * k8s部署详看文档 https://nacos.io/zh-cn/docs/use-nacos-with-kubernetes.html
 ## sentinel-dashboard启动
-* https://github.com/alibaba/Sentinel/releases 下载稳定版本  
+* https://github.com/alibaba/Sentinel/releases 下载稳定版本我是用的1.6  
 * 通过如下命令启动
 ```
 java -Dserver.port=8888 -Dcsp.sentinel.dashboard.server=localhost:8888 -Dproject.name=sentinel-dashboard -jar 
 sentinel-dashboard.jar
 ```
-* 启动后即可通过浏览器访问端口号为8888
+* 启动后即可通过浏览器访问端口号为8888默认账号密码sentinel
 ## tx-lcn分布式事物协调器启动
 * https://github.com/codingapi/tx-lcn/releases/tag/5.0.2.RELEASE 下载稳定版本  
 * 修改txlcn-tm子项目下的application.properties配置文件 mysql与redis
