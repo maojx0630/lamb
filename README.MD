@@ -103,6 +103,7 @@ common包均采用自动装配,具体装配策略详见spring.factories
 ## 关于权限管理 准备使用vue动态路由+springAnt规则校验  
 ```org.springframework.util.AntPathMatcher```
 ## mybatis分页工具采用我自己写的paging 也可根据自己需要引入
+## web容器选择了 undertow
 ## 推荐mybatis的idea插件 
 ```MyBatis Log Plugin ```  
 ```MyBatisCodeHelperPro```
